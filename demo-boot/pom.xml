@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2019 coodex.org (jujus.shen@126.com)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>demo-pom</artifactId>
+        <groupId>org.coodex.concrete.demo</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>demo-boot</artifactId>
+
+    <dependencies>
+
+        <!-- 调用jaxrs发布的concrete服务 -->
+        <dependency>
+            <groupId>org.coodex</groupId>
+            <artifactId>concrete-jaxrs-client</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- 使用jersey-client作为jaxrs实现 -->
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.coodex</groupId>
+            <artifactId>concrete-core-mock</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- 调用amqp发布的concrete服务 -->
+        <dependency>
+            <groupId>org.coodex</groupId>
+            <artifactId>concrete-amqp-client</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>${project.parent.groupId}</groupId>
+            <artifactId>demo-impl</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <!-- freemarker 的 formatter 插件 -->
+        <dependency>
+            <groupId>org.coodex</groupId>
+            <artifactId>concrete-formatters-freemarker</artifactId>
+        </dependency>
+
+        <!-- 使用jsr339/jaxrs 2.0 发布concrete服务-->
+        <dependency>
+            <groupId>org.coodex</groupId>
+            <artifactId>concrete-support-jsr339</artifactId>
+        </dependency>
+
+        <!-- 使用 amqp broker 发布concrete服务-->
+        <dependency>
+            <groupId>org.coodex</groupId>
+            <artifactId>concrete-support-amqp</artifactId>
+        </dependency>
+
+        <!-- swagger支持，方便查看和实验而已，非必须 -->
+        <dependency>
+            <groupId>org.coodex</groupId>
+            <artifactId>concrete-support-jaxrs-swagger</artifactId>
+        </dependency>
+
+        <!-- 使用spring作为concrete的DI容器-->
+        <dependency>
+            <groupId>org.coodex</groupId>
+            <artifactId>concrete-core-spring</artifactId>
+        </dependency>
+
+        <!-- 使用javax.inject规范，而不是spring规范 -->
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+        </dependency>
+
+        <!-- 使用spring-boot-starter-jersey跑服务 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jersey</artifactId>
+        </dependency>
+
+    </dependencies>
+
+
+</project>

@@ -1,0 +1,3 @@
+library:
+  delete: "${book.name} 被删除了"
+  sort: "整理并摧毁了 ${count} 本书"

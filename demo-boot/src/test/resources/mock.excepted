@@ -1,0 +1,5 @@
+org.coodex.concrete.demo.api.AddService
+org.coodex.concrete.demo.api.AddWithIn10Service
+org.coodex.concrete.demo.api.SubjoinExampleService
+org.coodex.concrete.demo.api.TokenDemoService
+(.+)\.excepted\.(.+)

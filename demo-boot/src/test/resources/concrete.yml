@@ -1,0 +1,12 @@
+jaxrs:
+  logger:
+    level:
+      # 可选值为TRACE,DEBUG,INFO,WARN,ERROR,不建议使用WARN以及ERROR级别
+      # 可选值以外则表示不输出
+      server: none #默认不开启，生产环境不建议开启
+      client: none #默认DEBUG
+amqp:
+  logger:
+    level:
+      server: info #默认不开启，生产环境不建议开启
+      client: info #默认DEBUG
