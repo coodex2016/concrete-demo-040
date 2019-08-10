@@ -20,6 +20,7 @@ import org.coodex.concrete.amqp.AMQPConnectionConfig;
 import org.coodex.concrete.core.intercept.LimitingInterceptor;
 import org.coodex.concrete.core.intercept.OperationLogInterceptor;
 import org.coodex.concrete.core.intercept.RBACInterceptor;
+import org.coodex.concrete.core.intercept.ServiceTimingInterceptor;
 import org.coodex.concrete.formatters.FreemarkerLogFormatter;
 import org.coodex.concrete.spring.ConcreteSpringConfiguration;
 import org.coodex.concrete.support.amqp.AMQPApplication;
@@ -94,6 +95,12 @@ public class DemoBootStarter {
     @Bean
     public LimitingInterceptor limitingInterceptor() {
         return new LimitingInterceptor();
+    }
+
+    // 服务时间限定拦截器
+    @Bean
+    public ServiceTimingInterceptor serviceTimingInterceptor(){
+        return new ServiceTimingInterceptor();
     }
 
     // 使用 freemarker 的 formatter

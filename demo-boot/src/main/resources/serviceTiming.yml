@@ -1,0 +1,14 @@
+breakfast:
+  type: TIMERANGE
+  range: 07:00-09:00
+lunch:
+  type: TIMERANGE
+  range: 11:40-13:00
+dinner:
+  type: TIMERANGE
+  range: 18:00-20:00
+workday:
+  type: WORKDAY
+worktime:
+  type: TIMERANGE
+  range: 08:30-12:00; 13:30-17:30

@@ -104,6 +104,12 @@
             <artifactId>spring-boot-starter-jersey</artifactId>
         </dependency>
 
+        <!-- 使用 rabbitmq 的消息传递者插件 -->
+        <dependency>
+            <groupId>org.coodex</groupId>
+            <artifactId>concrete-courier-rabbitmq</artifactId>
+        </dependency>
+
     </dependencies>
 
 

@@ -1,0 +1,3 @@
+destination: ${env:queue.destination} #与之前使用有所不同，需要在amqp之前增加rabbitmq:
+username: ${env:amqp.username}
+password: ${env:amqp.password}
