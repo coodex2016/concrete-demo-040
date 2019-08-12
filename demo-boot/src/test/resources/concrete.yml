@@ -10,3 +10,6 @@ amqp:
     level:
       server: info #默认不开启，生产环境不建议开启
       client: info #默认DEBUG
+
+zipkin:
+  location: http://localhost:9411

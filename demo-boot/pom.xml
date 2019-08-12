@@ -110,6 +110,12 @@
             <artifactId>concrete-courier-rabbitmq</artifactId>
         </dependency>
 
+        <!-- zipkin 的 concrete apm 插件 -->
+        <dependency>
+            <groupId>org.coodex</groupId>
+            <artifactId>concrete-apm-zipkin</artifactId>
+        </dependency>
+
     </dependencies>
 
 
