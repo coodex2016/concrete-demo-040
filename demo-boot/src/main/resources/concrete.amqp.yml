@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 
-location: ${env:amqp.url}
 amqp:
+  location: ${env:amqp.url}
   username: ${env:amqp.username}
   password: ${env:amqp.password}
   ttl: 600000

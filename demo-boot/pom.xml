@@ -62,22 +62,22 @@
             <version>${project.parent.version}</version>
         </dependency>
 
+        <!-- 基于Spring boot，使用jsr339/jaxrs 2.0 快速发布concrete服务 -->
+        <dependency>
+            <groupId>org.coodex</groupId>
+            <artifactId>concrete-spring-boot-jaxrs</artifactId>
+        </dependency>
+
         <!-- freemarker 的 formatter 插件 -->
         <dependency>
             <groupId>org.coodex</groupId>
             <artifactId>concrete-formatters-freemarker</artifactId>
         </dependency>
 
-        <!-- 使用jsr339/jaxrs 2.0 发布concrete服务-->
-        <dependency>
-            <groupId>org.coodex</groupId>
-            <artifactId>concrete-support-jsr339</artifactId>
-        </dependency>
-
         <!-- 使用 amqp broker 发布concrete服务-->
         <dependency>
             <groupId>org.coodex</groupId>
-            <artifactId>concrete-support-amqp</artifactId>
+            <artifactId>concrete-spring-boot-amqp</artifactId>
         </dependency>
 
         <!-- swagger支持，方便查看和实验而已，非必须 -->
@@ -86,22 +86,10 @@
             <artifactId>concrete-support-jaxrs-swagger</artifactId>
         </dependency>
 
-        <!-- 使用spring作为concrete的DI容器-->
-        <dependency>
-            <groupId>org.coodex</groupId>
-            <artifactId>concrete-core-spring</artifactId>
-        </dependency>
-
         <!-- 使用javax.inject规范，而不是spring规范 -->
         <dependency>
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
-        </dependency>
-
-        <!-- 使用spring-boot-starter-jersey跑服务 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jersey</artifactId>
         </dependency>
 
         <!-- 使用 rabbitmq 的消息传递者插件 -->

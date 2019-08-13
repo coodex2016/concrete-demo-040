@@ -1,3 +1,5 @@
+api:
+  packages: org.coodex.concrete.demo.**.api
 jaxrs:
   logger:
     level:
@@ -10,6 +12,12 @@ amqp:
     level:
       server: info #默认不开启，生产环境不建议开启
       client: info #默认DEBUG
+
+interceptors:
+  rbac: true # 开启RBAC拦截器
+  limiting: true # 开启限流拦截器
+  log: true # 开启操作日志拦截器
+  timing: true # 开启时间限定拦截器
 
 zipkin:
   location: http://localhost:9411
