@@ -10,10 +10,12 @@ env.yml
 /.idea/
 *.iml
 
+node_modules
+_book
+
 **.pdf
 .project
 .classpath
 .settings
-api_gen.*.properties
 
 dependencies.txt

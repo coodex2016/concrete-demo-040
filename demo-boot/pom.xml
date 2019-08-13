@@ -29,6 +29,13 @@
 
     <dependencies>
 
+        <!-- 文档及脚本生成工具 -->
+        <dependency>
+            <groupId>org.coodex</groupId>
+            <artifactId>concrete-api-tools</artifactId>
+            <scope>test</scope>
+        </dependency>
+
         <!-- 调用jaxrs发布的concrete服务 -->
         <dependency>
             <groupId>org.coodex</groupId>

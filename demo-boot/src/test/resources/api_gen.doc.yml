@@ -1,0 +1,3 @@
+
+desc: JaxRS.doc.backend.gitbook.v1
+path: ${env:doc.path}
