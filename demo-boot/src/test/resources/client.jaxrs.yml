@@ -1,1 +1,7 @@
 location: "http://localhost:8080/jaxrs"
+
+signature:
+  keyId: app00001
+  algorithm: HmacSHA256
+  hmacKey: Davidoff is handsome # 默认的HmacKeyStore方案
+

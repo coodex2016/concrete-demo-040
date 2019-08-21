@@ -43,12 +43,12 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- 使用jersey-client作为jaxrs实现 -->
-        <dependency>
-            <groupId>org.glassfish.jersey.core</groupId>
-            <artifactId>jersey-client</artifactId>
-            <scope>test</scope>
-        </dependency>
+<!--        &lt;!&ndash; 使用jersey-client作为jaxrs实现 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.glassfish.jersey.core</groupId>-->
+<!--            <artifactId>jersey-client</artifactId>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.coodex</groupId>

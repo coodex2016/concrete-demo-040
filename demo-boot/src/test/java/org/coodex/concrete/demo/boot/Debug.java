@@ -43,8 +43,8 @@ public class Debug {
             };
 
     public static void main(String[] args) {
-        NUMBER_SERVICE_LOADER.getServiceInstance(0);// 获取到的是EvenNumberAcceptableService的实例
-        NUMBER_SERVICE_LOADER.getServiceInstance(1);// 获取到的是OddNumberAcceptableService的实例
+        NUMBER_SERVICE_LOADER.select(0);// 获取到的是EvenNumberAcceptableService的实例
+        NUMBER_SERVICE_LOADER.select(1);// 获取到的是OddNumberAcceptableService的实例
         System.out.println(I18N.translate("message.105001"));
     }
 }
