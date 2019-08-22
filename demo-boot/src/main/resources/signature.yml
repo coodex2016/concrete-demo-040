@@ -1,7 +1,3 @@
 hmacKey:
   app00001: Davidoff is handsome # 默认的HmacKeyStore方案
 
-signature:
-  property:
-    keyId: appId
-    noise: random
