@@ -16,13 +16,12 @@
 
 package org.coodex.concrete.demo.impl;
 
-import org.coodex.concrete.common.Subjoin;
+import org.coodex.concrete.core.signature.SignUtil;
 import org.coodex.concrete.demo.api.excepted.DemoSignatureService;
 import org.coodex.concrete.demo.pojo.ExamplePojo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.inject.Inject;
 import javax.inject.Named;
 
 @Named
@@ -30,11 +29,12 @@ public class DemoSignatureServiceImpl implements DemoSignatureService {
 
     private final static Logger log = LoggerFactory.getLogger(DemoSignatureServiceImpl.class);
 
-    @Inject
-    private Subjoin subjoin;
-
     @Override
     public void doSomeThing(Integer a, String kkk, ExamplePojo pojo) {
-        log.info("client keyId: {}", subjoin.get("keyId"));
+        log.info("client keyId: {}, alg: {}, noise: {}, sign: {}",
+                SignUtil.getKeyId(),
+                SignUtil.getAlgorithm(),
+                SignUtil.getNoise(),
+                SignUtil.getSign());
     }
 }
