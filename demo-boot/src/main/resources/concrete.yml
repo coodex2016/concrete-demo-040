@@ -16,6 +16,7 @@ amqp:
 interceptors:
   rbac: true # 开启RBAC拦截器
   limiting: true # 开启限流拦截器
+  signature: true # 开启签名验签拦截器
   log: true # 开启操作日志拦截器
   timing: true # 开启时间限定拦截器
 
