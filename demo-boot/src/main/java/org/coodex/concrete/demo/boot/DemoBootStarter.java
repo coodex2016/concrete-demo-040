@@ -16,6 +16,7 @@
 
 package org.coodex.concrete.demo.boot;
 
+import org.coodex.concrete.core.intercept.LicenseCheckInterceptor;
 import org.coodex.concrete.formatters.FreemarkerLogFormatter;
 import org.coodex.concrete.spring.boot.EnableConcreteAMQP;
 import org.coodex.concrete.spring.boot.EnableConcreteJAXRS;
@@ -30,10 +31,10 @@ import org.springframework.context.annotation.Bean;
 @EnableConcreteJAXRS(
         servicePackages = "org.coodex.concrete.demo.**.api"
 )
-// 启用concrete amqp
-@EnableConcreteAMQP(
-        servicePackages = "org.coodex.concrete.demo.**.api"
-)
+//// 启用concrete amqp
+//@EnableConcreteAMQP(
+//        servicePackages = "org.coodex.concrete.demo.**.api"
+//)
 public class DemoBootStarter {
 
     private static String[] PACKAGES = new String[]{
@@ -60,6 +61,11 @@ public class DemoBootStarter {
 //        amqpApplication.registerPackage(PACKAGES);
 //        return amqpApplication;
 //    }
+
+    @Bean
+    public LicenseCheckInterceptor licenseCheckInterceptor(){
+        return new LicenseCheckInterceptor();
+    }
 
 
     // 使用 freemarker 的 formatter

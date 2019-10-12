@@ -64,6 +64,13 @@
         </dependency>
 
         <dependency>
+            <groupId>org.glassfish.web</groupId>
+            <artifactId>el-impl</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+
+        <dependency>
             <groupId>${project.parent.groupId}</groupId>
             <artifactId>demo-impl</artifactId>
             <version>${project.parent.version}</version>
