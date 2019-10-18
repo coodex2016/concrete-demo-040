@@ -18,10 +18,12 @@ package org.coodex.concrete.demo.api.excepted;
 
 import org.coodex.concrete.api.ConcreteService;
 import org.coodex.concrete.api.LogAtomic;
+import org.coodex.concrete.api.Modules;
 
 @ConcreteService
 public interface DemoLoginService {
 
     @LogAtomic(message = "登录", loggingType = LogAtomic.LoggingType.ALWAYS)
+    @Modules(values = {"M1", "M2"})
     void login(String id);
 }

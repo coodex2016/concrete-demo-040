@@ -17,8 +17,8 @@
 package org.coodex.concrete.demo.boot;
 
 import org.coodex.concrete.core.intercept.LicenseCheckInterceptor;
+import org.coodex.concrete.core.intercept.ProductionValidationInterceptor;
 import org.coodex.concrete.formatters.FreemarkerLogFormatter;
-import org.coodex.concrete.spring.boot.EnableConcreteAMQP;
 import org.coodex.concrete.spring.boot.EnableConcreteJAXRS;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -67,6 +67,10 @@ public class DemoBootStarter {
         return new LicenseCheckInterceptor();
     }
 
+    @Bean
+    public ProductionValidationInterceptor productionValidationInterceptor() {
+        return new ProductionValidationInterceptor();
+    }
 
     // 使用 freemarker 的 formatter
     @Bean
