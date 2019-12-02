@@ -69,6 +69,13 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Observable 异步调用的插件 -->
+        <dependency>
+            <groupId>org.coodex</groupId>
+            <artifactId>concrete-rx-observable</artifactId>
+            <scope>test</scope>
+        </dependency>
+
 
         <dependency>
             <groupId>${project.parent.groupId}</groupId>

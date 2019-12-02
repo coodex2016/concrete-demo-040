@@ -28,6 +28,21 @@
     <artifactId>demo-api</artifactId>
 
     <dependencies>
+        
+        <!-- 异步接口编译期生成器 -->
+        <dependency>
+            <groupId>org.coodex</groupId>
+            <artifactId>concrete-rx-builder</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- rxjava2 异步接口生成插件 -->
+        <dependency>
+            <groupId>org.coodex</groupId>
+            <artifactId>concrete-rx-observable</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.coodex</groupId>
             <artifactId>concrete-api</artifactId>
