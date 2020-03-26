@@ -16,35 +16,34 @@
 
 package org.coodex.concrete.demo.boot;
 
-import org.coodex.util.AcceptableService;
-import org.coodex.util.AcceptableServiceLoader;
 import org.coodex.util.I18N;
+import org.coodex.util.LazySelectableServiceLoader;
+import org.coodex.util.SelectableServiceLoader;
 
 public class Debug {
 
-    interface NumberAcceptableService extends AcceptableService<Integer> {}
+    private static final SelectableServiceLoader<Integer, NumberSelectableService> NUMBER_SERVICE_LOADER =
+            new LazySelectableServiceLoader<Integer, NumberSelectableService>() {
+            };
 
-    static class OddNumberAcceptableService implements NumberAcceptableService{
+    public static void main(String[] args) {
+        System.out.println(NUMBER_SERVICE_LOADER.select(0));// 获取到的是EvenNumberAcceptableService的实例
+        System.out.println(NUMBER_SERVICE_LOADER.select(1));// 获取到的是OddNumberAcceptableService的实例
+        System.out.println(I18N.translate("message.105001"));
+    }
+
+
+    public static class OddNumberSelectableService implements NumberSelectableService {
         @Override
         public boolean accept(Integer param) {
             return param != null && param % 2 == 1;
         }
     }
 
-    static class EvenNumberAcceptableService implements NumberAcceptableService{
+    public static class EvenNumberSelectableService implements NumberSelectableService {
         @Override
         public boolean accept(Integer param) {
             return param != null && param % 2 == 0;
         }
-    }
-
-    private static final AcceptableServiceLoader<Integer, NumberAcceptableService> NUMBER_SERVICE_LOADER =
-            new AcceptableServiceLoader<Integer, NumberAcceptableService>() {
-            };
-
-    public static void main(String[] args) {
-        NUMBER_SERVICE_LOADER.select(0);// 获取到的是EvenNumberAcceptableService的实例
-        NUMBER_SERVICE_LOADER.select(1);// 获取到的是OddNumberAcceptableService的实例
-        System.out.println(I18N.translate("message.105001"));
     }
 }

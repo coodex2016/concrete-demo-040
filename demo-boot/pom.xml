@@ -43,6 +43,8 @@
             <scope>test</scope>
         </dependency>
 
+
+
 <!--        &lt;!&ndash; 使用jersey-client作为jaxrs实现 &ndash;&gt;-->
 <!--        <dependency>-->
 <!--            <groupId>org.glassfish.jersey.core</groupId>-->

@@ -1,0 +1,5 @@
+location: ${env:amqp.url}
+amqp:
+  username: ${env:amqp.username}
+  password: ${env:amqp.password}
+  ttl: 600000
